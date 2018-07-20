@@ -7,14 +7,14 @@ class FlightFinder::CLI
   def initialize
     @request = FlightFinder::Request.new
     @scraper = FlightFinder::Scraper.new
-    @flight = FlightFinder::Flight.new
   end
 
   def call
     self.request.get_request
-    self.scraper.run(self.request, self.flight)
+    self.scraper.run(self.request)
+    self.request.get_details
+    self.scraper.show_details(self.request.flight_num)
     puts self.scraper.url
-    puts self.flight.price
   end
 
 end

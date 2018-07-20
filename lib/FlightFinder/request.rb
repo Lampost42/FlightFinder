@@ -2,7 +2,7 @@ require './config/environment.rb'
 
 class FlightFinder::Request
 
-  attr_accessor :legs, :start_city, :start_country, :start_state, :start_date, :end_date, :end_city, :end_country, :end_state
+  attr_accessor :legs, :start_city, :start_country, :start_state, :start_date, :end_date, :end_city, :end_country, :end_state, :flight_num
 
 
   def get_request
@@ -33,7 +33,13 @@ class FlightFinder::Request
       puts "What day do you want to return? (yyyy-mm-dd)"
       self.end_date = gets.strip
     end
+    puts ""
+    puts ""
   end
 
+  def get_details
+    puts "Which flight would you like to know more about?"
+    self.flight_num = gets.strip.to_i
+  end
 
 end
