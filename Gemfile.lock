@@ -1,19 +1,16 @@
-PATH
-  remote: .
-  specs:
-    FlightFinder (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.4-x64-mingw32)
+      mini_portile2 (~> 2.3.0)
     rake (12.0.0)
 
 PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  FlightFinder!
-  bundler (~> 1.16)
+  nokogiri
   rake
 
 BUNDLED WITH
